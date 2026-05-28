@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>深蓝之源 · 安全生产管理手记</title>
+<link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <h1 class="site-title">深蓝之源</h1>
+    <p class="site-desc">火力发电厂安全生产管理实战笔记</p>
+    <nav>
+      <a href="/">文章</a>
+      <a href="about.html">关于</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <ul class="post-list" id="post-list">
+    <li class="loading">加载中...</li>
+  </ul>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2026 深蓝之源 · 用心守护每一度电的安全</p>
+  </div>
+</footer>
+
+<script>
+// 文章列表
+const posts = [
+  {
+    title: "自我介绍",
+    slug: "hello-world",
+    date: "2026-05-28",
+    summary: "关于这个博客，关于我，关于安全生产。"
+  }
+];
+
+const list = document.getElementById('post-list');
+if (posts.length === 0) {
+  list.innerHTML = '<li class="empty">还没有文章，敬请期待。</li>';
+} else {
+  list.innerHTML = posts.map(p => `
+    <li>
+      <a href="posts/${p.slug}.html" class="post-title">${p.title}</a>
+      <span class="post-date">${p.date}</span>
+      <p class="post-summary">${p.summary}</p>
+    </li>
+  `).join('');
+}
+</script>
+
+</body>
+</html>
