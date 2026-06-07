@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
@@ -20,65 +20,36 @@
 </header>
 
 <main class="container">
-  <ul class="post-list" id="post-list">
-    <li class="loading">加载中...</li>
+  <ul class="post-list">
+    <li>
+      <a href="posts/safety-month-2026.html" class="post-title">安全生产月，别让它变成"形式月"</a>
+      <span class="post-date">2026-05-30</span>
+      <p class="post-summary">六月安全生产月，横幅挂起来、签名搞起来，然后呢？干了十几年安全管理，最怕的就是六月轰轰烈烈、七月涛声依旧。火电厂的安全月到底该怎么搞？四条建议，不搞形式、只留干货。</p>
+    </li>
+    <li>
+      <a href="posts/confined-space.html" class="post-title">有限空间作业，最容易被忽视的五个坑</a>
+      <span class="post-date">2026-05-28</span>
+      <p class="post-summary">火电厂有限空间比你想象的多——汽包、脱硫塔、煤仓都是。结合GB 46768-2025新标准，五个最容易踩的坑，附实用自查清单。</p>
+    </li>
+    <li>
+      <a href="posts/safety-inspection.html" class="post-title">安全检查到底查什么？</a>
+      <span class="post-date">2026-05-28</span>
+      <p class="post-summary">干了十几年安全管理，被问最多的一句话就是：你们安全检查，到底在查什么？我的回答是——查的不是隐患，是习惯。</p>
+    </li>
+    <li>
+      <a href="posts/hello-world.html" class="post-title">自我介绍</a>
+      <span class="post-date">2026-05-28</span>
+      <p class="post-summary">关于这个博客，关于我，关于安全生产。</p>
+    </li>
   </ul>
 </main>
 
 <footer class="site-footer">
   <div class="container">
     <p>© 2026 深蓝之源 · 用心守护每一度电的安全</p>
-    <p style="margin-top:8px;font-size:13px;color:#6b8fa8;">
-      <span id="busuanzi_container_site_pv">📊 总访问 <span id="busuanzi_value_site_pv"></span> 次</span>
-      <span style="margin:0 8px;">|</span>
-      <span id="busuanzi_container_site_uv">👥 访客 <span id="busuanzi_value_site_uv"></span> 人</span>
-    </p>
   </div>
 </footer>
 
-<script>
-// 文章列表
-const posts = [
-  {
-    title: "安全生产月，别让它变成"形式月"",
-    slug: "safety-month-2026",
-    date: "2026-05-30",
-    summary: "六月安全生产月，横幅挂起来、签名搞起来，然后呢？干了十几年安全管理，最怕的就是六月轰轰烈烈、七月涛声依旧。火电厂的安全月到底该怎么搞？四条建议，不搞形式、只留干货。"
-  },
-  {
-    title: "有限空间作业，最容易被忽视的五个坑",
-    slug: "confined-space",
-    date: "2026-05-28",
-    summary: "火电厂有限空间比你想象的多——汽包、脱硫塔、煤仓都是。结合GB 46768-2025新标准，五个最容易踩的坑，附实用自查清单。"
-  },
-  {
-    title: "安全检查到底查什么？",
-    slug: "safety-inspection",
-    date: "2026-05-28",
-    summary: "干了十几年安全管理，被问最多的一句话就是：你们安全检查，到底在查什么？我的回答是——查的不是隐患，是习惯。"
-  },
-  {
-    title: "自我介绍",
-    slug: "hello-world",
-    date: "2026-05-28",
-    summary: "关于这个博客，关于我，关于安全生产。"
-  }
-];
 
-const list = document.getElementById('post-list');
-if (posts.length === 0) {
-  list.innerHTML = '<li class="empty">还没有文章，敬请期待。</li>';
-} else {
-  list.innerHTML = posts.map(p => `
-    <li>
-      <a href="posts/${p.slug}.html" class="post-title">${p.title}</a>
-      <span class="post-date">${p.date}</span>
-      <p class="post-summary">${p.summary}</p>
-    </li>
-  `).join('');
-}
-</script>
-
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 </body>
 </html>
